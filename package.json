@@ -1,0 +1,28 @@
+{
+  "name": "blackhole-qr",
+  "version": "1.1.7",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "qr",
+    "cbor",
+    "hex",
+    "pako",
+    "infernal"
+  ],
+  "author": "kraphene <law.smart.contract@gmail.com>",
+  "license": "MIT",
+  "description": "To save large amounts of information in a QR, which is generated in an html canvas. (CBOR, PAKO, HEX)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/octocat/my-other-repo.git"
+  },
+  "dependencies": {
+    "cbor": "^8.1.0",
+    "pako": "^2.0.4",
+    "qrious": "^4.0.2",
+    "serve": "^13.0.2"
+  }
+}

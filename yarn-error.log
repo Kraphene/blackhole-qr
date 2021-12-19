@@ -1,0 +1,52 @@
+Arguments: 
+  /home/pop/.nvm/versions/node/v17.1.0/bin/node /home/pop/.nvm/versions/node/v17.1.0/bin/yarn publish
+
+PATH: 
+  /home/pop/.deno/bin:/home/pop/.deno/bin:/home/pop/.nvm/versions/node/v17.1.0/bin:/home/pop/.cargo/bin:/home/pop/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  17.1.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.npmjs.org/blackhole-qr/-/user/org.couchdb.user:kraphene: failed to authenticate: Could not authenticate kraphene: bad password
+      at Request.params.callback [as _callback] (/home/pop/.nvm/versions/node/v17.1.0/lib/node_modules/yarn/lib/cli.js:67029:18)
+      at Request.self.callback (/home/pop/.nvm/versions/node/v17.1.0/lib/node_modules/yarn/lib/cli.js:140883:22)
+      at Request.emit (node:events:390:28)
+      at Request.<anonymous> (/home/pop/.nvm/versions/node/v17.1.0/lib/node_modules/yarn/lib/cli.js:141855:10)
+      at Request.emit (node:events:390:28)
+      at IncomingMessage.<anonymous> (/home/pop/.nvm/versions/node/v17.1.0/lib/node_modules/yarn/lib/cli.js:141777:12)
+      at Object.onceWrapper (node:events:509:28)
+      at IncomingMessage.emit (node:events:402:35)
+      at endReadableNT (node:internal/streams/readable:1340:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+npm manifest: 
+  {
+    "name": "blackhole-qr",
+    "version": "1.0.0",
+    "main": "src/index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": ["qr","cbor","hex","pako","infernal"],
+    "author": "kraphene <law.smart.contract@gmail.com>",
+    "license": "MIT",
+    "description": "To save large amounts of information in a QR, which is generated in an html canvas. (CBOR, PAKO, HEX)",
+    "dependencies": {
+      "cbor": "^8.1.0",
+      "pako": "^2.0.4",
+      "qrious": "^4.0.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
