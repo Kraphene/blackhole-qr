@@ -83,8 +83,8 @@ RESULT ->  93.98 % Less
 6.DECODE 
 
 ```sh
-     const QR = new Blackhole()
-     QR.decodeByValue()
+     QR.decode()
+     QR.decodeByValue('QR.cborHex')
 
 ```
 
