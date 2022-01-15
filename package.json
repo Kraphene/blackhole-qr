@@ -1,6 +1,6 @@
 {
   "name": "blackhole-qr",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,10 +15,14 @@
   "author": "kraphene <law.smart.contract@gmail.com>",
   "license": "MIT",
   "description": "To save large amounts of information in a QR, which is generated in an html canvas. (CBOR, PAKO, HEX)",
-  "repository": "github:Kraphene/blackhole-qr",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kraphene/blackhole-qr.git"
+  },
   "dependencies": {
     "cbor": "^8.1.0",
     "pako": "^2.0.4",
-    "qrious": "^4.0.2"
+    "qrious": "^4.0.2",
+    "serve": "^13.0.2"
   }
 }

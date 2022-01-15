@@ -1,6 +1,6 @@
 const cbor = require("cbor");
 const pako = require("pako");
-const QRious = require("qrious");
+const qrious = require("qrious");
 
 const CBOR = (e) => {
   return cbor.encode(e);
@@ -15,7 +15,7 @@ const HEX = (e) => {
 };
 
 const QRIOUS = (c, v) => {
-  return new QRious({
+  return new qrious({
     element: document.getElementById(c),
     value: v,
   });
@@ -28,19 +28,23 @@ class Blackhole {
     this.set = null;
     this.canvas = null;
   }
-  newQr(canvas, value, size) {
+  generate(canvas, value, size) {
     this.value = value;
     this.cborHex = HEX(PAKO(CBOR(this.value)));
     this.set = QRIOUS(canvas, this.cborHex);
     this.set.size = size;
     this.set.background = "transparent";
-    this.set.oregroundAlpha = 0.8;
+    this.set.foregroundAlpha = 0.8;
     this.set.backgroundAlpha = 0.8;
     this.set.foreground = "#000000";
     this.set.level = "L";
   }
-  revertQr() {
-    return 0;
+  decode(value) {
+    const hexDecoded = new Buffer.from(value, 'hex')
+    const pakoDecoded = pako.inflate(hexDecoded)
+    const cborDecoded = cbor.decode(pakoDecoded)
+
+    return cborDecoded
   }
 }
 
