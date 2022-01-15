@@ -39,7 +39,14 @@ class Blackhole {
     this.set.foreground = "#000000";
     this.set.level = "L";
   }
-  decode(value) {
+  decode() {
+    const hexDecoded = new Buffer.from(this.cborHex, 'hex')
+    const pakoDecoded = pako.inflate(hexDecoded)
+    const cborDecoded = cbor.decode(pakoDecoded)
+
+    return cborDecoded
+  }
+  decodeByValue(value) {
     const hexDecoded = new Buffer.from(value, 'hex')
     const pakoDecoded = pako.inflate(hexDecoded)
     const cborDecoded = cbor.decode(pakoDecoded)

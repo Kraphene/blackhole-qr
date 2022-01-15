@@ -35,12 +35,12 @@ import { Blackhole }from 'blackhole-qr'
 3. Class instance       (canvas, value, qr_size)
 ```sh
      const QR = new Blackhole()
-      QR.newQr('qr', 'value_to_QR', 300)
+      QR.generate('qr', 'value_to_QR', 300)
 ```
 4. Change QR parameters  (optional)
 ```sh
      const QR = new Blackhole()
-      QR.newQr('qr', 'value', 300)
+      QR.generate('qr', 'value', 300)
       QR.set.size = 500;
       QR.set.background = 'green';
       QR.set.backgroundAlpha = 0.8;
@@ -71,7 +71,7 @@ import { Blackhole }from 'blackhole-qr'
 
       console.log(JSON.stringify(beforeEncodeProcess).length);
       const QR = new Blackhole();
-      QR.newQr("qr", beforeEncodeProcess, 300);
+      QR.generate("qr", beforeEncodeProcess, 300);
       console.log(QR.cborHex.length);
     }
 ```
@@ -80,8 +80,13 @@ OUTPUT 1856 Length
 RESULT ->  93.98 % Less 
 
 
+6.DECODE 
 
+```sh
+     const QR = new Blackhole()
+     QR.decodeByValue()
 
+```
 
 
 
